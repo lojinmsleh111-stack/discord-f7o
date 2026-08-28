@@ -147,10 +147,10 @@ async def on_message(message: discord.Message):
     except discord.Forbidden:
         pass
 
-    # حذف رسائل روم التفعيل
+    # حذف رسالة العضو فقط
     try:
-        await message.channel.purge(limit=100)
-    except discord.Forbidden:
+        await message.delete()
+    except discord.HTTPException:
         pass
 
 
