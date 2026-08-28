@@ -147,11 +147,6 @@ async def on_message(message: discord.Message):
     except discord.Forbidden:
         pass
 
-    # حذف رسالة العضو فقط
-    try:
-        await message.delete()
-    except discord.HTTPException:
-        pass
 
 
 bot.run(TOKEN)
