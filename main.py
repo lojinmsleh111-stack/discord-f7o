@@ -62,12 +62,6 @@ async def on_message(message: discord.Message):
 
     roblox_name = message.content.strip()
 
-    # حذف رسالة المستخدم
-    try:
-        await message.delete()
-    except discord.HTTPException:
-        pass
-
     if not roblox_name:
         return
 
@@ -79,6 +73,12 @@ async def on_message(message: discord.Message):
         except discord.Forbidden:
             pass
         return
+
+    # حذف رسالة العضو التي أرسلها للتفعيل فقط
+    try:
+        await message.delete()
+    except discord.HTTPException:
+        pass
 
     member = message.author
     guild = message.guild
@@ -146,7 +146,6 @@ async def on_message(message: discord.Message):
         )
     except discord.Forbidden:
         pass
-
 
 
 bot.run(TOKEN)
