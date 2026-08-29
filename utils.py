@@ -25,4 +25,4 @@ def generate_id() -> str:
 
 
 def build_nickname(roblox_name: str, random_id: str) -> str:
-    return f"WE | {roblox_name} | {random_id}"
+    return f"WS | {roblox_name} | {random_id}"
