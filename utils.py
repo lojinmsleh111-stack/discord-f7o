@@ -2,7 +2,7 @@ import json
 import os
 
 COUNTER_FILE = "id_counter.json"
-START_ID = 1407
+START_ID = 1445
 
 
 def generate_id() -> str:
